@@ -113,7 +113,8 @@ a,
 .logotype a,
 .logotype>p,
 ul li:hover .submenu,
-.button-free {
+.button-free,
+.special img {
   display: block;
 }
 
@@ -983,12 +984,12 @@ h2 {
   }
 
   .logotype {
-    width: 20.1vw;
+    width: 168px;
   }
 
   .logotype img {
-    width: 20.1vw;
-    height: 10.67vw;
+    width: 168px;
+    height: 89px;
   }
 
   .logotype>p {
@@ -1171,27 +1172,36 @@ h2 {
     color: rgba(0, 0, 0, 0.2);
     transform: rotate(-90deg);
 
-    right: -80px;
+    right: 15px;
     top: 50%;
+  }
+
+  .how_work .piece {
+    /*right: calc(-8.5% + 15px);*/
+    right: -80px;
   }
 
   .discribe {
     padding: 90px 8.5%;
   }
 
-  .discribe .piece,
-  .footer .piece {
+  .discribe+.piece,
+  .footer+.piece {
     color: rgba(255, 255, 255, 0.25);
   }
 
   .action .piece {
-    right: 20px;
+    /*right: 25px;*/
     text-shadow: none;
   }
 
   .special {
     padding: 80px 8.5%;
   }
+
+  /*.special .piece {
+    right: -115px;
+  }*/
 
   .free {
     padding: 100px 8.5%;

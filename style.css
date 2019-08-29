@@ -102,13 +102,6 @@ main,
   align-items: center;
 }
 
-/*.topmenu, .socials {
-  justify-content: space-between;
-}*/
-/*.info {
- align-items: center;
-}*/
-
 a,
 .logotype a,
 .logotype>p,
@@ -119,8 +112,7 @@ ul li:hover .submenu,
 }
 
 .submenu,
-.menu-button>span,
-.contact {
+.menu-button>span {
   display: none;
 }
 
@@ -148,7 +140,9 @@ li>a:hover,
 .special strong,
 .footer .address,
 .copyright,
-.button-free {
+.button-free,
+.contact .tel,
+.contact .telephone {
   color: #FFBA2F;
 }
 
@@ -159,7 +153,8 @@ h1,
 .solution,
 .more_1,
 .darker,
-.diff {
+.diff,
+.order {
   color: #FFFFFF;
 }
 
@@ -191,16 +186,13 @@ ul {
 
 h1 {
   font-family: Alice;
-  font-size: 4.4vw;
   font-style: normal;
   font-weight: normal;
   line-height: 1.1em;
   letter-spacing: 0.11em;
-  margin-left: 26%;
 }
 
 h6 {
-  margin-left: 26%;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   opacity: 0.6;
@@ -223,6 +215,17 @@ h6 {
   content: "__"
 }
 
+.order {
+  background: radial-gradient(33.08px at 47.64% 45.1%, #FFBA2F 0%, #B67B06 100%);
+  box-shadow: 4px 4px 4px rgba(255, 220, 51, 0.15);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25)
+}
+
 .dark {
   background-color: #0E283D;
   border: 2px solid #0E283D;
@@ -242,6 +245,12 @@ h6 {
   background: none;
   color: #000000;
   justify-content: space-between;
+}
+
+.info_group .row:first-child .info:last-child {
+  background: #0E283D;
+  border: 2px solid #0E283D;
+  color: #FFFFFF;
 }
 
 .ai {
@@ -272,7 +281,7 @@ h6 {
 }
 
 .trust {
-  background-image: url("images/PRO.png");
+  background-image: url("images/bgd/PRO.png");
   color: #000000;
 }
 
@@ -551,7 +560,6 @@ h2 {
   border-radius: 20px;
   text-align: center;
   text-transform: uppercase;
-  /*color: #FFBA2F;*/
   text-shadow: 8px 8px 8px rgba(255, 186, 47, 0.1);
   text-transform: uppercase;
 }
@@ -705,7 +713,10 @@ h2 {
 
 
 @media screen and (max-width: 767px) {
-  .header-menu>.topmenu {
+
+  .header-menu>.topmenu,
+  .contact,
+  .order {
     display: none;
   }
 
@@ -742,16 +753,16 @@ h2 {
   }
 
   h1 {
+    font-size: 4.4vw;
+    margin-left: 26%;
     margin-bottom: 1.4em;
   }
 
   h6 {
-    font-size: 12px;
+    font-size: 3.3vw;
+    margin-left: 26%;
   }
 
-  .order {
-    display: none;
-  }
 
   .dark {
     width: 83%;
@@ -953,14 +964,13 @@ h2 {
     font-size: 8px;
   }
 
-
-
-
 }
 
 
 @media screen and (min-width: 768px) {
-  .header-menu>.topmenu {
+
+  .header-menu>.topmenu,
+  .contact {
     display: none;
   }
 
@@ -998,30 +1008,23 @@ h2 {
   }
 
   h1 {
-    margin-bottom: 0.75em;
+    font-size: 4.3vw;
+    margin-left: 25%;
+    margin-bottom: 0.8em;
   }
 
   h6 {
-    font-size: 18px;
+    font-size: 2.15vw;
+    margin-left: 25%;
   }
 
   .order {
-    display: block;
     width: 185px;
     height: 45px;
-    margin-left: 26%;
-    margin-top: 61px;
-    background: radial-gradient(33.08px at 47.64% 45.1%, #FFBA2F 0%, #B67B06 100%);
-    box-shadow: 4px 4px 4px rgba(255, 220, 51, 0.15);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 14px;
     line-height: 17px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25)
+    margin-left: 25%;
+    margin-top: 61px;
   }
 
   .dark {
@@ -1035,7 +1038,7 @@ h2 {
   }
 
   .content {
-    background-image: url("images/EXPERT.png");
+    background-image: url("images/bgd/EXPERT.png");
     background-size: 89px 1059px;
     background-position: left 20.5vw top 10px;
   }
@@ -1191,17 +1194,13 @@ h2 {
   }
 
   .action .piece {
-    /*right: 25px;*/
+
     text-shadow: none;
   }
 
   .special {
     padding: 80px 8.5%;
   }
-
-  /*.special .piece {
-    right: -115px;
-  }*/
 
   .free {
     padding: 100px 8.5%;
@@ -1237,6 +1236,10 @@ h2 {
     font-size: 14px;
   }
 
+  .socials {
+    font-size: 0;
+  }
+
   .button-cons {
     width: 36.6vw;
     height: 7vw;
@@ -1257,23 +1260,28 @@ h2 {
     font-size: 10px;
   }
 
-
-
-
-
-
 }
 
 @media screen and (min-width: 1025px) {
+  .header {
+    min-height: 48.8vw;
+    padding: 80px 10.4vw 176px 4.8vw;
+  }
+
   .menu-button {
     display: none;
   }
 
-  .header-menu {
+  .header-menu,
+  .contact {
     display: block;
+  }
+
+  .header-menu {
     width: 45.6vw;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 15px;
   }
 
   .header-menu>.topmenu {
@@ -1332,18 +1340,319 @@ h2 {
     text-decoration: none;
   }
 
+  .tel {
+    padding-left: 40px;
+    background-image: url("images/phone.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: left 5px center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2.86vw;
+    margin-left: 20%;
+    margin-bottom: 0.9em;
+    margin-top: 0.9em;
+  }
+
+  h6 {
+    font-size: 1.25vw;
+    margin-left: 20%;
+  }
+
+  .order {
+    width: 224px;
+    height: 55px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 20%;
+    margin-top: 84px;
+  }
+
+  .dark {
+    width: 41.37vw;
+    height: 4.73vw;
+
+    right: 5.41vw;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
 
 
+  .content {
+    padding: 0 5.2vw 5.2vw 5.2vw;
+    background-image: url("images/bgd/эксперт.png");
+    background-size: 86.6vw 43.3vw;
+    background-position: left 7.8vw top 5.2vw;
+  }
 
+  .row .info {
+    width: 20.67vw;
+    min-height: 20.98vw;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .info_group+.row {
+    min-height: 16.25vw;
+  }
+
+  .info_group .row:first-child .info:last-child {
+    padding-top: 100px;
+  }
+
+  .reverse .info:last-child {
+    background: none;
+    padding-top: calc(100px + 6.5vw + 15px);
+  }
+
+  .info {
+    padding: 100px 30px 50px 50px;
+  }
+
+  .ai {
+    width: 6.5vw;
+    height: 6.5vw;
+    top: calc(-3.25vw);
+    left: calc(50% - 3.25vw);
+  }
+
+  .ai_1,
+  .ai_2 {
+    top: calc(-7.98vw);
+  }
+
+  .ai_4 {
+    top: 15px;
+  }
+
+  .more {
+    width: 9.2vw;
+    height: 2.18vw;
+    font-size: 0.93vw;
+  }
+
+
+  .trust {
+    margin-left: 7.8vw;
+    margin-right: 5.2vw;
+    background-image: none;
+    font-size: 24px;
+  }
+
+  .trust h3:first-child {
+    font-size: 36px;
+  }
 
   .person,
   .judicial {
     width: 13.9vw;
     min-width: 200px;
     height: 3.28vw;
-    max-height: 47px;
+    min-height: 47px;
+    font-size: 1.25vw;
   }
 
 
+  .pro {
+    width: 71.8vw;
+    height: 14.3vw;
+    /*background-image: url("images/bgd/про.png");*/
+    background-image: url("images/bgd/про.svg");
+    background-size: 71.8vw 14.3vw;
+    background-position: left 13vw bottom 0;
+    background-repeat: no-repeat;
+  }
+
+  .solution {
+    width: 52.6vw;
+    min-height: 27.2vw;
+    margin-left: 5.2vw;
+    padding: 90px 9vw 90px 6.97vw;
+    font-size: 18px;
+  }
+
+  .solution h2 {
+    font-size: 1.3em
+  }
+
+  .bg2 {
+    width: 44.27vw;
+    height: 26.9vw;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+
+    position: absolute;
+    top: 70px;
+    right: 5.2vw;
+    z-index: 2;
+  }
+
+  .how_work {
+    font-size: 18px;
+    padding: 0 10.4vw;
+  }
+
+  .how_work h2,
+  .how_work h3 {
+    font-size: 1.87vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .row_child {
+    width: 31.25vw;
+  }
+
+  .row_child:first-child {
+    margin-right: auto;
+  }
+
+  .more_1 {
+    width: 171px;
+    height: 63px;
+    margin: 50px auto 150px;
+  }
+
+  .image-green {
+    width: 14.8vw;
+    height: 28.1vw;
+    top: calc(-50px);
+    left: calc(-10.4vw);
+  }
+
+  .differ {
+    margin-top: 30px;
+  }
+
+  .indark {
+    padding-bottom: 10.4vw;
+    background-image: url("images/bgd/EXPERT_d.png");
+    background-size: 63vw 43vw;
+    background-position: left 0 bottom 0;
+    background-repeat: no-repeat;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .indark h3 {
+    text-align: center;
+    margin-bottom: 150px;
+  }
+
+  .reverse .row_child:first-child {
+    margin-right: 0;
+  }
+
+  .inlet .row_child {
+    width: 36.45vw;
+  }
+
+  .darker {
+    width: 16.6vw;
+    margin: 0;
+  }
+
+  .darker_1 {
+    margin-right: auto;
+  }
+
+  .how_work .darker h3 {
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+
+  .icon_3,
+  .icon_4 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .reverse .row_child:last-child {
+    margin-right: auto;
+  }
+
+
+  .diff {
+    font-size: 1.87vw;
+  }
+
+  .special {
+    padding: 5.2vw 10.4vw;
+  }
+
+  .special img {
+    width: 32vw;
+    height: 21.7vw;
+    margin: 0 auto 60px;
+  }
+
+  .special img+p {
+    margin-left: 100px;
+  }
+
+  .free {
+    background-image: url("images/bgd/PRO_hor.png");
+    background-size: 65.1vw 17.13vw;
+    background-position: left 10.4vw top 50px;
+    background-repeat: no-repeat;
+  }
+
+  .field-name,
+  .field-phone,
+  .field-email {
+    width: 35.6vw;
+    font-size: 18px;
+    background-size: 50px;
+  }
+
+  .button-free {
+    width: 311px;
+    height: 65px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+  }
+
+  .image-coffee {
+    width: 38.28vw;
+    height: 37.55vw;
+
+    bottom: calc(-9.37vw);
+  }
+
+
+  .footer {
+    padding: 80px 8.3vw 100px 8.3vw;
+  }
+
+  .footer .row_child {
+    /*width: calc(83.4vw/4);*/
+    width: 20.85vw;
+  }
+
+  .button-cons {
+    width: 15.9vw;
+    height: 3vw;
+    margin: 16px auto 40px;
+
+  }
+
+  .container-footer {
+    /*width: 17.7vw;*/
+    width: 100%;
+  }
 
 }

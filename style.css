@@ -164,7 +164,7 @@ a {
 }
 
 .header {
-  background: #003B5D;
+  background-color: #003B5D;
   background-image: url("images/bg.png");
 }
 
@@ -1510,11 +1510,11 @@ h2 {
     margin-bottom: 50px;
   }
 
-  .row_child {
+  .how_work .row_child {
     width: 31.25vw;
   }
 
-  .row_child:first-child {
+  .how_work .row_child:first-child {
     margin-right: auto;
   }
 
@@ -1535,6 +1535,10 @@ h2 {
     margin-top: 30px;
   }
 
+  .how_work .piece {
+    right: calc(-10.4vw + 15px);
+  }
+
   .indark {
     padding-bottom: 10.4vw;
     background-image: url("images/bgd/EXPERT_d.png");
@@ -1553,11 +1557,11 @@ h2 {
     margin-bottom: 150px;
   }
 
-  .reverse .row_child:first-child {
+  .indark .reverse .row_child:first-child {
     margin-right: 0;
   }
 
-  .inlet .row_child {
+  .indark .row_child, .discribe .row_child, .special .row_child {
     width: 36.45vw;
   }
 
@@ -1566,7 +1570,7 @@ h2 {
     margin: 0;
   }
 
-  .darker_1 {
+  .darker_1, .reverse .row_child:last-child, .discribe .row_child:first-child, .special .row_child:first-child {
     margin-right: auto;
   }
 
@@ -1580,11 +1584,6 @@ h2 {
     width: 50px;
     height: 50px;
   }
-
-  .reverse .row_child:last-child {
-    margin-right: auto;
-  }
-
 
   .diff {
     font-size: 1.87vw;
@@ -1639,20 +1638,24 @@ h2 {
   }
 
   .footer .row_child {
-    /*width: calc(83.4vw/4);*/
-    width: 20.85vw;
+    width: 20.5vw;
+  }
+
+  .footer-logo {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: auto;
   }
 
   .button-cons {
     width: 15.9vw;
-    height: 3vw;
+    min-width: 208px;;
+    height: 60px;
     margin: 16px auto 40px;
-
   }
 
   .container-footer {
-    /*width: 17.7vw;*/
-    width: 100%;
+    width: 17vw;
   }
 
 }

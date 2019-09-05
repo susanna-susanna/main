@@ -50,7 +50,8 @@ body {
 .action,
 main,
 .green,
-.inlet {
+.inlet,
+.button-cons {
   position: relative;
 }
 
@@ -108,7 +109,9 @@ a,
 .logotype>p,
 ul li:hover .submenu,
 .button-free,
-.special img {
+.special img,
+.form-group label,
+.copyright {
   display: block;
 }
 
@@ -159,9 +162,12 @@ h1,
   color: #FFFFFF;
 }
 
-
 a {
   text-decoration: none;
+}
+
+button:focus {
+  outline: none;
 }
 
 .header {
@@ -220,10 +226,12 @@ h6 {
   background: radial-gradient(33.08px at 47.64% 45.1%, #FFBA2F 0%, #B67B06 100%);
   box-shadow: 4px 4px 4px rgba(255, 220, 51, 0.15);
   border-radius: 5px;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  font-weight: 600;
   text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25)
 }
 
@@ -302,10 +310,12 @@ h3 {
 }
 
 .person {
+  border: none;
   background: radial-gradient(43.45px at 49.1% 12.9%, #54778E 0%, #0E2638 100%);
 }
 
 .judicial {
+  background: none;
   border: 2px solid #1F3A4D;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -453,7 +463,7 @@ h2 {
 
 .action>p {
   font-size: 20px;
-  line-height: 30px;
+  line-height: 1.5em;
   margin-top: 10px;
   margin-bottom: 50px;
 }
@@ -464,7 +474,7 @@ h2 {
 
 .title {
   font-size: 30px;
-  line-height: 45px;
+  line-height: 1.5em;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 130px;
@@ -485,7 +495,7 @@ h2 {
 }
 
 .special strong {
-  line-height: 152%;
+  line-height: 1.52;
 }
 
 .special .italic {
@@ -503,7 +513,7 @@ h2 {
 }
 
 .free p {
-  line-height: 185%;
+  line-height: 1.85;
   text-align: center;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -518,7 +528,6 @@ h2 {
   width: 76.4vw;
   height: 85px;
   padding: 5px;
-  box-sizing: border-box;
   vertical-align: middle;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -554,7 +563,6 @@ h2 {
 .button-free {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
   border: 1px solid #003b5D;
   background: radial-gradient(45.50px at 50% 50%, #035483 0%, #003B5D 100%);
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
@@ -572,8 +580,6 @@ h2 {
 
   z-index: 2;
 }
-
-
 
 
 .footer {
@@ -673,9 +679,7 @@ h2 {
 }
 
 .copyright {
-  display: block;
   text-align: center;
-  text-decoration: none;
   line-height: 1.1em;
 }
 
@@ -712,6 +716,7 @@ h2 {
 .order:hover {
   color: #003B5D;
 }
+
 
 
 @media screen and (max-width: 767px) {
@@ -823,7 +828,7 @@ h2 {
     background-size: 94px 486px;
     background-position: left 70px bottom 0;
     font-size: 14px;
-    line-height: 15px;
+    line-height: 1.07;
   }
 
   .person,
@@ -987,7 +992,6 @@ h2 {
   .menu-button img {
     width: 60px;
     height: 60px;
-
   }
 
   .header {
@@ -1024,7 +1028,7 @@ h2 {
     width: 185px;
     height: 45px;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 1.21;
     margin-left: 25%;
     margin-top: 61px;
   }
@@ -1196,7 +1200,6 @@ h2 {
   }
 
   .action .piece {
-
     text-shadow: none;
   }
 
@@ -1287,7 +1290,6 @@ h2 {
   }
 
   .header-menu>.topmenu {
-    /*width: 45.6vw;*/
     display: flex;
     margin: 0;
     padding: 0;
@@ -1368,7 +1370,7 @@ h2 {
     width: 224px;
     height: 55px;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.2;
     margin-left: 20%;
     margin-top: 84px;
   }
@@ -1470,7 +1472,6 @@ h2 {
   .pro {
     width: 71.8vw;
     height: 14.3vw;
-    /*background-image: url("images/bgd/про.png");*/
     background-image: url("images/bgd/про.svg");
     background-size: 71.8vw 14.3vw;
     background-position: left 13vw bottom 0;
@@ -1563,7 +1564,9 @@ h2 {
     margin-right: 0;
   }
 
-  .indark .row_child, .discribe .row_child, .special .row_child {
+  .indark .row_child,
+  .discribe .row_child,
+  .special .row_child {
     width: 36.45vw;
   }
 
@@ -1572,7 +1575,10 @@ h2 {
     margin: 0;
   }
 
-  .darker_1, .reverse .row_child:last-child, .discribe .row_child:first-child, .special .row_child:first-child {
+  .darker_1,
+  .reverse .row_child:last-child,
+  .discribe .row_child:first-child,
+  .special .row_child:first-child {
     margin-right: auto;
   }
 
@@ -1651,9 +1657,11 @@ h2 {
 
   .button-cons {
     width: 15.9vw;
-    min-width: 208px;;
+    min-width: 208px;
     height: 60px;
     margin: 16px auto 40px;
+
+    z-index: 3;
   }
 
   .container-footer {

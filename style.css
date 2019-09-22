@@ -51,7 +51,9 @@ body {
 main,
 .green,
 .inlet,
-.button-cons, .row, .free {
+.button-cons,
+.row,
+.free {
   position: relative;
 }
 
@@ -148,7 +150,8 @@ li>a:hover,
 .copyright,
 .button-free,
 .contact .tel,
-.contact .telephone, h2 {
+.contact .telephone,
+h2 {
   color: #FFBA2F;
 }
 
@@ -156,7 +159,8 @@ li>a,
 h1,
 .info,
 .person,
-.solution, .page-main .solution h2,
+.solution,
+.page-main .solution h2,
 .more_1,
 .darker,
 .diff,
@@ -168,7 +172,13 @@ a {
   text-decoration: none;
 }
 
-button:focus, a:focus {
+button,
+a {
+  cursor: pointer;
+}
+
+button:focus,
+a:focus {
   outline: none;
 }
 
@@ -224,9 +234,11 @@ h1::after {
   left: 0;
   color: #FFBA2F;
 }
+
 .page-main h1::after {
   content: "";
 }
+
 .page-main h1 {
   line-height: 1.1em;
   text-align: left;
@@ -331,6 +343,7 @@ h3 {
   letter-spacing: 0.08em;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .page-main h3 {
   text-shadow: none;
 }
@@ -362,6 +375,7 @@ h2 {
   letter-spacing: 0.1em;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .page-main h2 {
   color: rgba(36, 35, 35, 0.8);
   letter-spacing: 0;
@@ -391,6 +405,7 @@ h2 {
   background-color: #003B5D;
   background-image: url("images/bg2.jpg");
 }
+
 .about_us .bg2 {
   background-color: #E5E5E5;
   background-image: url("images/bus-meeting-pic3.png");
@@ -771,12 +786,16 @@ h2 {
 }
 
 
-.ses .descript h2 {
+.ses .descript h2,
+.util .descript h2,
+.pro_control .descript h2 {
   position: relative;
 }
-.ses .descript h2:after {
+
+.ses .descript h2:after,
+.util .descript h2:after,
+.pro_control .descript h2:after {
   position: absolute;
-  content: "Санитарная экспертиза";
   font-size: 0.5em;
   color: #000000;
   letter-spacing: 0;
@@ -785,16 +804,156 @@ h2 {
   bottom: calc(-1.7em);
   left: 0;
 }
+
+.ses .descript h2:after {
+  content: "Санитарная экспертиза";
+}
+
+.util .descript h2:after {
+  content: "отходы класса I-V";
+}
+
+.pro_control .descript h2:after {
+  content: "Программа производственного контроля (план)";
+}
+
+.descript h3,
+.addition h3 {
+  font-size: 1em;
+}
+
 .ses .bg2 {
   background-image: url("images/bg3.jpg");
 }
+
+.audit .bg2 {
+  background-image: url("images/bg4.jpg");
+}
+
+.util .bg2 {
+  background-image: url("images/bg8.jpg");
+}
+
+.pro_control .bg2 {
+  background-image: url("images/bg1.jpg");
+}
+
+.sout .bg2 {
+  background-image: url("images/bg9.jpeg");
+}
+
+.inspection .bg2 {
+  background-image: url("images/bg6.jpg");
+}
+
+.dis_control .bg2 {
+  background-image: url("images/bg7.jpg");
+}
+
+.licens .bg2 {
+  background-image: url("images/bg10.jpg");
+}
+
+.licens_medic .descript div,
+.licens_pharm .descript p,
+.licens_edu .descript p,
+.information .descript p {
+  margin-bottom: 1em;
+}
+
+.licens_pharm .descript p,
+.licens_edu .descript p,
+.information .descript p,
+.information .no_margin p {
+  margin-top: 0;
+}
+
+.information .no_margin p {
+  margin-bottom: 0;
+}
+
+.licens_medic .bg2 {
+  background-image: url("images/bg11.png");
+}
+
+.shadow {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.licens_pharm .bg2 {
+  background-image: url("images/bg12.jpg");
+}
+
+.licens_edu .bg2 {
+  background-image: url("images/bg13.jpg");
+}
+
+.lab .bg2 {
+  background-image: url("images/bg14.jpg");
+}
+
+.survey_object .bg2 {
+  background-image: url("images/bg16.jpg");
+}
+
+.stocks .bg2 {
+  background-image: url("images/bg17.jpg");
+}
+
+.news .bg2 {
+  background-image: url("images/bg18.jpg");
+}
+
+.information .bg2 {
+  background-image: url("images/bg19.jpg");
+}
+
+.contacts .bg2 {
+  background-image: url("images/bg20.jpg");
+}
+
+
+
+
+.row_contact {
+  position: relative;
+}
+
+.row_contact .bg2 {
+  position: absolute;
+  top: calc(-6vw);
+  left: 0;
+  z-index: 2;
+}
+
+.contacts .solution {
+  position: static;
+  margin-top: 6vw;
+  margin-left: auto;
+}
+
+.contacts .descript h3 {
+  font-size: 1.5em;
+}
+
+.contacts .descript .differ {
+  font-size: 1.25em;
+  text-align: left;
+}
+
+.contacts .row {
+  position: static;
+}
+
+
 
 
 @media screen and (max-width: 767px) {
 
   .header-menu>.topmenu,
   .contact,
-  .order, .invis {
+  .order,
+  .invis {
     display: none;
   }
 
@@ -816,17 +975,19 @@ h2 {
     min-height: 305px;
     padding: 4.8vw 7vw 21vw 7vw;
   }
+
   .header {
     min-height: 305px;
     padding: 36px 8.3vw 130px;
   }
- 
+
   .page-main .logotype {
     width: 100px;
     margin-top: 0;
     margin-left: 0;
   }
-   .logotype {
+
+  .logotype {
     width: 47.1vw;
     margin-top: 66px;
     margin-left: 20vw;
@@ -837,7 +998,7 @@ h2 {
     height: 45px;
   }
 
-   .logotype img {
+  .logotype img {
     width: 47.1vw;
     height: 25vw;
   }
@@ -847,7 +1008,7 @@ h2 {
     font-size: 10px;
   }
 
-   .logotype>p {
+  .logotype>p {
     margin: 5vw auto 45px 7.7vw;
     font-size: 5vw;
     line-height: 1.16;
@@ -859,7 +1020,7 @@ h2 {
     margin-bottom: 1.4em;
   }
 
-   h1 {
+  h1 {
     font-size: 6.6vw;
     margin-left: 1.08;
     margin-bottom: 1.1em;
@@ -882,12 +1043,18 @@ h2 {
     line-height: 1.2em;
     letter-spacing: 0.11em;
   }
+
   .page-main main {
     letter-spacing: 0;
   }
 
-  .descript, .addition {
+  .descript,
+  .addition {
     padding: 50px 30px;
+  }
+
+  .addition {
+    margin-bottom: 2.5em;
   }
 
   .content {
@@ -968,22 +1135,26 @@ h2 {
   h2 {
     font-size: 18px;
   }
-  .descript h2, .addition h2 {
+
+  .descript h2,
+  .addition h2 {
     margin-top: 0.2em;
     margin-bottom: 1.1em;
   }
+
   .descript+article p {
     margin-bottom: 1.1em;
   }
- 
+
   .addition p {
     margin-top: 0;
     margin-bottom: 1em;
   }
-  
+
   .solution {
     padding: 25px 45px;
   }
+
   .page-main .solution {
     padding: 50px 8.5%;
     font-size: 14px;
@@ -993,6 +1164,7 @@ h2 {
     width: 100%;
     height: 83.6vw;
   }
+
   .page-main .bg2 {
     height: 67.5vw;
   }
@@ -1025,7 +1197,7 @@ h2 {
     max-width: 121px;
     height: 48.3vw;
     max-height: 212.5px;
-    
+
     top: calc(-125px);
     left: calc(-0.5vw);
   }
@@ -1033,7 +1205,7 @@ h2 {
   .page-main .image-green {
     top: calc(-10px);
     left: calc(-8.5vw);
-  
+
   }
 
   .differ {
@@ -1041,7 +1213,7 @@ h2 {
     margin-top: 2em;
     margin-bottom: 2em;
   }
-  
+
   .page-main .indark>h3 {
     margin-bottom: 65px;
     text-align: center;
@@ -1060,6 +1232,7 @@ h2 {
   .icon_6 {
     margin-top: 60px;
   }
+
   .diff+h3 {
     margin-top: 20px;
     margin-bottom: 25px;
@@ -1101,6 +1274,7 @@ h2 {
 
     bottom: calc(-2%);
   }
+
   .page-main .image-coffee {
     bottom: calc(-0.5%);
   }
@@ -1130,6 +1304,34 @@ h2 {
 
   .copyright {
     font-size: 8px;
+  }
+
+  .audit .free {
+    margin-top: calc(25vw - 50px);
+  }
+
+
+
+  .contacts .descript {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 100px;
+  }
+
+  .contacts .descript article {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: calc(6vw + 50px);
+  }
+
+  .contacts .descript h3 {
+    margin-left: 30px;
+  }
+
+  .contacts .solution,
+  .contacts .bg2 {
+    width: 85vw;
+    height: 51.8vw;
   }
 
 }
@@ -1182,22 +1384,25 @@ h2 {
   h1 {
     font-size: 55px;
   }
+
   .page-main h1 {
     font-size: 4.3vw;
     margin-left: 25%;
     margin-bottom: 0.8em;
   }
-  
+
   h6 {
     font-size: 2.15vw;
     margin-left: 25%;
   }
+
   .order {
     width: 226px;
     height: 52px;
     margin: 90px auto 115px;
-        
+
   }
+
   .page-main .order {
     width: 185px;
     height: 45px;
@@ -1216,9 +1421,10 @@ h2 {
   main {
     font-size: 24px;
   }
- .page-main main {
-   font-size: 18px;
- }
+
+  .page-main main {
+    font-size: 18px;
+  }
 
   .content {
     background-image: url("images/bgd/EXPERT.png");
@@ -1313,6 +1519,7 @@ h2 {
   h2 {
     font-size: 36px;
   }
+
   .page-main h2 {
     font-size: 22px;
   }
@@ -1326,7 +1533,7 @@ h2 {
     width: 100%;
     padding: 40px 170px;
   }
-  
+
   .bg2 {
     width: 57.19vw;
     height: 36.3vw;
@@ -1347,6 +1554,7 @@ h2 {
 
   .addition {
     padding: 130px 65px 150px;
+    margin-bottom: 2em;
   }
 
   .how_work {
@@ -1359,7 +1567,7 @@ h2 {
     margin-bottom: 50px;
   }
 
-  .indark> h3 {
+  .indark>h3 {
     margin-bottom: 55px;
     text-align: center;
   }
@@ -1382,6 +1590,7 @@ h2 {
     top: calc(-210px);
     left: 0;
   }
+
   .page-main .image-green {
     width: 235px;
     height: 400px;
@@ -1395,10 +1604,12 @@ h2 {
   }
 
   .page-main .differ {
-    font-size: 1em;
     margin-top: 70px;
     margin-bottom: 90px;
+  }
 
+  .licens .differ {
+    margin-top: 1.5em;
   }
 
   .piece {
@@ -1427,6 +1638,7 @@ h2 {
     margin-top: 40px;
     margin-bottom: 40px;
   }
+
   .diff+h3 {
     margin-top: 40px;
     margin-bottom: 30px;
@@ -1470,12 +1682,14 @@ h2 {
     margin-top: 70px;
     margin-bottom: 100px;
   }
+
   .image-coffee {
     width: 41vw;
     height: 39.5vw;
 
     bottom: calc(-3%);
   }
+
   .page-main .image-coffee {
     bottom: calc(-1%);
   }
@@ -1508,6 +1722,42 @@ h2 {
   .copyright {
     font-size: 10px;
   }
+
+  .audit .free {
+    margin-top: 70px;
+  }
+
+  .inspection .descript p+p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+
+
+  .contacts .descript {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 175px;
+  }
+
+  .contacts .descript article {
+    margin-right: 65px;
+    margin-left: 65px;
+    margin-bottom: calc(6vw + 50px);
+  }
+
+  .contacts .descript h3 {
+    margin-left: 65px;
+  }
+
+  .contacts .solution,
+  .contacts .bg2 {
+    width: 85vw;
+    height: 51.8vw;
+  }
+
+
+
 
 }
 
@@ -1617,6 +1867,7 @@ h2 {
     line-height: 1.2;
     margin: 80px auto 65px;
   }
+
   .page-main .order {
     width: 224px;
     height: 55px;
@@ -1729,7 +1980,8 @@ h2 {
     background-repeat: no-repeat;
   }
 
-  .solution, .page-main .solution {
+  .solution,
+  .page-main .solution {
     width: 52.6vw;
     min-height: 27.2vw;
     margin-left: 5.2vw;
@@ -1737,7 +1989,7 @@ h2 {
     font-size: 24px;
     line-height: 1.2;
   }
-    
+
   .page-main .solution {
     font-size: 18px;
   }
@@ -1746,7 +1998,8 @@ h2 {
     font-size: 1.3em
   }
 
-  .bg2, .page-main .bg2 {
+  .bg2,
+  .page-main .bg2 {
     width: 44.27vw;
     height: 27vw;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
@@ -1782,14 +2035,15 @@ h2 {
     height: 63px;
     margin: 50px auto 150px;
   }
+
   .image-green {
     width: 14.8vw;
     height: 28.1vw;
     top: 100px;
     left: 0;
   }
+
   .page-main .image-green {
-   
     top: calc(-50px);
     left: calc(-10.4vw);
   }
@@ -1875,19 +2129,28 @@ h2 {
     margin-left: 100px;
   }
 
-  .descript, .addition {
+  .descript,
+  .addition {
     display: flex;
     flex-wrap: wrap;
     padding: 100px 5.2vw 5.7vw;
+    margin-bottom: 0;
   }
 
-  .descript>article, .addition>article {
+  .descript>article,
+  .addition>article {
     width: 41vw;
   }
-  .descript>article+article, .addition>article+article {
+
+  .descript>article+article,
+  .addition>article+article {
     margin-left: auto;
   }
-  .descript h2, .descript h3, .addition h2, .addition h3 {
+
+  .descript h2,
+  .descript h3,
+  .addition h2,
+  .addition h3 {
     margin-top: 0;
   }
 
@@ -1918,7 +2181,8 @@ h2 {
     margin-bottom: 100px;
   }
 
-  .image-coffee, .page-main .image-coffee {
+  .image-coffee,
+  .page-main .image-coffee {
     width: 38.28vw;
     height: 37.55vw;
 
@@ -1963,6 +2227,108 @@ h2 {
     width: 17vw;
   }
 
+
+  .util .descript article+article,
+  .pro_control .descript article+article,
+  .inspection .descript article+article {
+    padding-top: 1em;
+  }
+
+  .util .descript h2,
+  .pro_control .descript h2,
+  .pro_control .addition h3,
+  .inspection .descript+div,
+  .dis_control .descript>div,
+  .licens .addition>div,
+  .licens_medic .descript h2,
+  .licens_pharm .descript h2,
+  .licens_edu .descript h2,
+  .information .descript h2,
+  .contacts .descript h3 {
+    width: 100%;
+  }
+
+  .util .addition h3 {
+    font-size: 1.5em;
+  }
+
+  .pro_control .addition h3,
+  .inspection h3 {
+    font-size: 1em;
+  }
+
+  /*.inspection .descript+div, .dis_control .descript>div, .licens .addition>div, .licens_medic .descript h2, .licens_pharm .descript h2, .licens_edu .descript h2 {
+    width: 100%;
+  }*/
+  .inspection .descript h2,
+  .licens .addition h3 {
+    width: 50%;
+  }
+
+  .licens .addition .differ {
+    margin-top: 3em;
+    text-align: left;
+  }
+
+  .inspection .descript article+article h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+
+
+
+  .contacts .descript {
+    padding: 5vw 5.46vw;
+    margin-bottom: 5px
+  }
+
+
+  .contacts .descript>article {
+    width: 23.14vw;
+    margin-right: auto;
+  }
+
+  .contacts .descript h3,
+  .contacts .descript>article {
+    margin-left: 5.47vw;
+  }
+
+  /*.contacts .descript h3 {
+    font-size: 1.5em;
+  }
+  .contacts .descript .differ {
+    font-size: 1.25em;
+    text-align: left;
+  }*/
+  .contacts .solution,
+  .contacts .bg2 {
+    width: 44.27vw;
+    height: 26.98vw;
+  }
+
+  .row_contact {
+    margin-top: calc(6vw + 1em);
+    width: 52.1vw;
+  }
+
+  .contacts .solution {
+    margin-left: auto;
+    margin-top: 0;
+  }
+
+  /*.contacts .descript {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 175px;
+  }
+  .contacts .descript article {
+    margin-right: 65px;
+    margin-left: 65px;
+    margin-bottom: 85px;
+  }*/
+
+
+
+
 }
-
-
